@@ -1,0 +1,9 @@
+Flask
+tensorflow
+pandas
+numpy
+yfinance
+scikit-learn
+joblib
+flask-cors
+gunicorn

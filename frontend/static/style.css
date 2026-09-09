@@ -1,0 +1,105 @@
+:root {
+  --bg-light:     #ffffff;  /* white background */
+  --bg-dark:      #1a1a1a;  /* dark gray */
+  --text-light:   #333333;  /* dark slate */
+  --text-dark:    #f0f0f0;  /* light gray */
+  --accent:       #007bff;  /* bootstrap blue */
+  --accent-hover: #0056b3;  /* darker blue */
+  --sell-color:   #ff5722;  /* vibrant red-orange */
+  --hold-color:   #607d8b;  /* cool blue-gray */
+  --card-light:   #f8f9fa;  /* light card background */
+  --card-dark:    #3a3a3a;  /* updated dark card background (changed from #2c2c2c) */
+  --border-color: #ced4da;  /* light gray for borders */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.card {
+  background: var(--card-light);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.dark-mode .card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-accent:active {
+  transform: translateY(0);
+}
+
+#result p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .btn-accent {
+    width: 100%;
+  }
+}
+canvas {
+  width: 100% !important;
+  height: 400px !important;
+  max-height: 500px;
+}
+
